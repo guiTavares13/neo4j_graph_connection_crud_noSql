@@ -1,0 +1,16 @@
+--Criação
+CREATE (p:Person {name: "Agnes", age: 3})
+
+
+--Consulta
+MATCH (p:Person)
+WHERE p.name = "Agnes"
+RETURN p
+
+-- Atualização
+MATCH (p:Person {name: "Agnes"})
+SET p.age = 4
+
+
+-- Deletar
+MATCH (p:Person {name: "Agnes"}) DELETE p
